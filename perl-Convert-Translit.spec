@@ -1,4 +1,5 @@
-%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+%include	/usr/lib/rpm/macros.perl
+%define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
 Summary:	Convert-Translit perl module
 Summary(pl):	Modu³ perla Convert-Translit
 Name:		perl-Convert-Translit
@@ -8,7 +9,9 @@ Copyright:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Convert/Convert-Translit-%{version}.tar.gz
-BuildRequires:	perl >= 5.005_03-10
+Patch:		perl-Convert-Translit-dep.patch
+BuildRequires:	rpm-perlprov
+BuildRequires:	perl >= 5.005_03-13
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -22,6 +25,9 @@ znaków.
 
 %prep
 %setup -q -n Convert-Translit-%{version}
+%patch -p1
+
+chmod +x find-perl-requires
 
 %build
 perl Makefile.PL
@@ -45,10 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {Changes,README,TODO}.gz
+%doc {Changes,README,TODO}.gz example.pl
 
 %{perl_sitelib}/Convert/Translit.pm
-%{perl_sitelib}/Convert/example.pl
 %{perl_sitelib}/Convert/rfc1345
 %{perl_sitelib}/Convert/substitutes
 %{perl_sitearch}/auto/Convert/Translit
