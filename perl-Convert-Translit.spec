@@ -7,12 +7,12 @@ Summary:	Convert::Translit perl module
 Summary(pl):	Modu³ perla Convert::Translit
 Name:		perl-Convert-Translit
 Version:	1.03
-Release:	8
+Release:	9
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-dep.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,7 +32,8 @@ zestawami znaków.
 chmod +x find-perl-*
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -48,9 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README TODO
-%{perl_sitelib}/Convert/Translit.pm
-%{perl_sitelib}/Convert/rfc1345
-%{perl_sitelib}/Convert/substitutes
+%{perl_vendorlib}/Convert/Translit.pm
+%{perl_vendorlib}/Convert/rfc1345
+%{perl_vendorlib}/Convert/substitutes
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/example.pl
