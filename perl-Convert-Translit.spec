@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Convert
-%define	pnam	Translit
+%define		pdir	Convert
+%define		pnam	Translit
 %define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
 %define		__find_provides %{_builddir}/Convert-Translit-%{version}/find-perl-provides
 Summary:	Convert::Translit - Perl module for string conversion among numerous character sets
