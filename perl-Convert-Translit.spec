@@ -32,11 +32,11 @@ by the module when creating transliteration maps).
 
 %description -l pl
 Modu³ Perla Convert::Translit udostêpnia funkcjê "transliterate" do
-konwersji tekstów pomiêdzy dosolnymi 8-bitowymi zestawami znaków
+konwersji tekstów pomiêdzy dowolnymi 8-bitowymi zestawami znaków
 zdefiniowanymi w RFC 1345 (oko³o 128 zestawów znaków). Dokument RFC
 jest do³±czony do pakietu, co umo¿liwia poszukiwanie nazw zestawów
 znaków i ich aliasów (i jest on równie¿ czytany przez modu³ podczas
-teorzenia odwzorowañ konwerji).
+tworzenia odwzorowañ konwersji).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
