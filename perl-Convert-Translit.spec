@@ -5,7 +5,7 @@ Summary:	Convert-Translit perl module
 Summary(pl):	Modu³ perla Convert-Translit
 Name:		perl-Convert-Translit
 Version:	1.03
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
