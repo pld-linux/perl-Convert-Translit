@@ -4,7 +4,7 @@
 +#!/bin/sh
 +ulimit -c 0
 +
-+filelist=`sed "s/['\"]/\\\&/g" | egrep "\.(pl|pm)"`
++filelist=`sed "s/['\"]/\\\&/g" | egrep "\.pm$"`
 +
 +requires="`echo $filelist|/usr/lib/rpm/find-requires`"
 +requires_perl="`/usr/lib/rpm/perl.req $filelist`"
@@ -12,3 +12,13 @@
 +echo "$requires
 +$requires_perl
 +$requires_mod"| sort -u
+--- Convert-Translit-1.03.dep/find-perl-provides	Thu Jan  1 01:00:00 1970
++++ Convert-Translit-1.03/find-perl-provides	Sun Oct 31 16:59:06 1999
+@@ -0,0 +1,7 @@
++#!/bin/sh
++ulimit -c 0
++
++filelist=`sed "s/['\"]/\\\&/g" | egrep "\.pm$"`
++
++echo $filelist|/usr/lib/rpm/find-provides
++/usr/lib/rpm/perl.prov $filelist

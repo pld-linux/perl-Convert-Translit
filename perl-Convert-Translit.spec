@@ -1,5 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 %define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
+%define		__find_provides %{_builddir}/Convert-Translit-%{version}/find-perl-provides
 Summary:	Convert-Translit perl module
 Summary(pl):	Modu³ perla Convert-Translit
 Name:		perl-Convert-Translit
@@ -10,7 +11,7 @@ Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Convert/Convert-Translit-%{version}.tar.gz
 Patch:		perl-Convert-Translit-dep.patch
-BuildRequires:	rpm-perlprov
+BuildRequires:	rpm-perlprov >= 3.0.3-15
 BuildRequires:	perl >= 5.005_03-13
 %requires_eq	perl
 Requires:	%{perl_sitearch}
@@ -27,7 +28,7 @@ znaków.
 %setup -q -n Convert-Translit-%{version}
 %patch -p1
 
-chmod +x find-perl-requires
+chmod +x find-perl-*
 
 %build
 perl Makefile.PL
