@@ -1,14 +1,13 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Convert
 %define	pnam	Translit
-%include	/usr/lib/rpm/macros.perl
 %define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
 %define		__find_provides %{_builddir}/Convert-Translit-%{version}/find-perl-provides
 Summary:	Convert-Translit perl module
 Summary(pl):	Modu³ perla Convert-Translit
 Name:		perl-Convert-Translit
 Version:	1.03
-Release:	7
-
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -27,7 +26,7 @@ Convert-Translit - modu³ do konwersji ³añcuchów pomiêdzy ró¿nymi
 zestawami znaków.
 
 %prep
-%setup -q -n Convert-Translit-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch -p1
 
 chmod +x find-perl-*
