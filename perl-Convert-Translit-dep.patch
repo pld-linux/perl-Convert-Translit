@@ -1,0 +1,14 @@
+--- Convert-Translit-1.03.dep/find-perl-requires	Thu Jan  1 01:00:00 1970
++++ Convert-Translit-1.03/find-perl-requires	Sun Oct 31 16:59:06 1999
+@@ -0,0 +1,11 @@
++#!/bin/sh
++ulimit -c 0
++
++filelist=`sed "s/['\"]/\\\&/g" | egrep "\.(pl|pm)"`
++
++requires="`echo $filelist|/usr/lib/rpm/find-requires`"
++requires_perl="`/usr/lib/rpm/perl.req $filelist`"
++requires_mod="`rpm -q --whatprovides --qf "%{NAME}\n" $requires_perl 2>/dev/null`"
++echo "$requires
++$requires_perl
++$requires_mod"| sort -u
