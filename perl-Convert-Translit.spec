@@ -3,12 +3,13 @@
 %define	pnam	Translit
 %define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
 %define		__find_provides %{_builddir}/Convert-Translit-%{version}/find-perl-provides
-Summary:	Convert::Translit perl module
-Summary(pl):	Modu³ perla Convert::Translit
+Summary:	Convert::Translit - Perl module for string conversion among numerous character sets
+Summary(pl):	Convert::Translit - modu³ Perla do konwersji tekstów pomiêdzy ró¿nymi zestawami znaków
 Name:		perl-Convert-Translit
 Version:	1.03
 Release:	9
-License:	GPL
+# same as perl
+License:	GPL v1 or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	bcf7e8811f2ee1bbf5ca1f547d1b02dc
@@ -19,12 +20,19 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Convert::Translit - module for string conversion among numerous
-character sets.
+Convert::Translit Perl module provides the function "transliterate"
+for transliterating strings between any 8-bit character sets defined
+in RFC 1345 (about 128 character sets).  The RFC document is included
+so you can look up character set names and aliases (and it's also read
+by the module when creating transliteration maps).
 
 %description -l pl
-Convert::Translit - modu³ do konwersji ³añcuchów pomiêdzy ró¿nymi
-zestawami znaków.
+Modu³ Perla Convert::Translit udostêpnia funkcjê "transliterate" do
+konwersji tekstów pomiêdzy dosolnymi 8-bitowymi zestawami znaków
+zdefiniowanymi w RFC 1345 (oko³o 128 zestawów znaków). Dokument RFC
+jest do³±czony do pakietu, co umo¿liwia poszukiwanie nazw zestawów
+znaków i ich aliasów (i jest on równie¿ czytany przez modu³ podczas
+teorzenia odwzorowañ konwerji).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
