@@ -1,3 +1,5 @@
+%define	pdir	Convert
+%define	pnam	Translit
 %include	/usr/lib/rpm/macros.perl
 %define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
 %define		__find_provides %{_builddir}/Convert-Translit-%{version}/find-perl-provides
@@ -5,7 +7,8 @@ Summary:	Convert-Translit perl module
 Summary(pl):	Modu³ perla Convert-Translit
 Name:		perl-Convert-Translit
 Version:	1.03
-Release:	6
+Release:	7
+
 License:	GPL
 Group:		Development/Languages/Perl
 Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
@@ -16,7 +19,7 @@ Group(ja):	³«È¯/¸À¸ì/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Group(pt):	Desenvolvimento/Linguagens/Perl
 Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Convert/Convert-Translit-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-dep.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
