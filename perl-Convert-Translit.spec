@@ -37,18 +37,20 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-gzip -9nf Changes README TODO
+install example.pl $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz example.pl
+%doc Changes README TODO
 %{perl_sitelib}/Convert/Translit.pm
 %{perl_sitelib}/Convert/rfc1345
 %{perl_sitelib}/Convert/substitutes
 %{_mandir}/man3/*
+%dir %{_examplesdir}/%{name}-%{version}
+%attr(755) %{_examplesdir}/%{name}-%{version}/example.pl
