@@ -3,8 +3,8 @@
 %define	pnam	Translit
 %define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
 %define		__find_provides %{_builddir}/Convert-Translit-%{version}/find-perl-provides
-Summary:	Convert-Translit perl module
-Summary(pl):	Modu³ perla Convert-Translit
+Summary:	Convert::Translit perl module
+Summary(pl):	Modu³ perla Convert::Translit
 Name:		perl-Convert-Translit
 Version:	1.03
 Release:	8
@@ -18,11 +18,11 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Convert-Translit - module for string conversion among numerous
+Convert::Translit - module for string conversion among numerous
 character sets.
 
 %description -l pl
-Convert-Translit - modu³ do konwersji ³añcuchów pomiêdzy ró¿nymi
+Convert::Translit - modu³ do konwersji ³añcuchów pomiêdzy ró¿nymi
 zestawami znaków.
 
 %prep
