@@ -53,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitelib}/Convert/substitutes
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
-%attr(755) %{_examplesdir}/%{name}-%{version}/example.pl
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/example.pl
