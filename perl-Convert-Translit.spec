@@ -32,7 +32,7 @@ zestawami znaków.
 chmod +x find-perl-*
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %install
