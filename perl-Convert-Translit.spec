@@ -8,7 +8,7 @@
 %define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
 %define		__find_provides %{_builddir}/Convert-Translit-%{version}/find-perl-provides
 Summary:	Convert::Translit - Perl module for string conversion among numerous character sets
-Summary(pl):	Convert::Translit - modu³ Perla do konwersji tekstów pomiêdzy ró¿nymi zestawami znaków
+Summary(pl.UTF-8):   Convert::Translit - moduÅ‚ Perla do konwersji tekstÃ³w pomiÄ™dzy rÃ³Å¼nymi zestawami znakÃ³w
 Name:		perl-Convert-Translit
 Version:	1.03
 Release:	10
@@ -30,13 +30,13 @@ in RFC 1345 (about 128 character sets).  The RFC document is included
 so you can look up character set names and aliases (and it's also read
 by the module when creating transliteration maps).
 
-%description -l pl
-Modu³ Perla Convert::Translit udostêpnia funkcjê "transliterate" do
-konwersji tekstów pomiêdzy dowolnymi 8-bitowymi zestawami znaków
-zdefiniowanymi w RFC 1345 (oko³o 128 zestawów znaków). Dokument RFC
-jest do³±czony do pakietu, co umo¿liwia poszukiwanie nazw zestawów
-znaków i ich aliasów (i jest on równie¿ czytany przez modu³ podczas
-tworzenia odwzorowañ konwersji).
+%description -l pl.UTF-8
+ModuÅ‚ Perla Convert::Translit udostÄ™pnia funkcjÄ™ "transliterate" do
+konwersji tekstÃ³w pomiÄ™dzy dowolnymi 8-bitowymi zestawami znakÃ³w
+zdefiniowanymi w RFC 1345 (okoÅ‚o 128 zestawÃ³w znakÃ³w). Dokument RFC
+jest doÅ‚Ä…czony do pakietu, co umoÅ¼liwia poszukiwanie nazw zestawÃ³w
+znakÃ³w i ich aliasÃ³w (i jest on rÃ³wnieÅ¼ czytany przez moduÅ‚ podczas
+tworzenia odwzorowaÅ„ konwersji).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
