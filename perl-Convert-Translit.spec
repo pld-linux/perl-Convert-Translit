@@ -8,7 +8,7 @@
 %define		__find_requires %{_builddir}/Convert-Translit-%{version}/find-perl-requires
 %define		__find_provides %{_builddir}/Convert-Translit-%{version}/find-perl-provides
 Summary:	Convert::Translit - Perl module for string conversion among numerous character sets
-Summary(pl.UTF-8):   Convert::Translit - moduł Perla do konwersji tekstów pomiędzy różnymi zestawami znaków
+Summary(pl.UTF-8):	Convert::Translit - moduł Perla do konwersji tekstów pomiędzy różnymi zestawami znaków
 Name:		perl-Convert-Translit
 Version:	1.03
 Release:	10
