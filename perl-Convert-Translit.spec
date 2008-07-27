@@ -11,7 +11,7 @@ Summary:	Convert::Translit - Perl module for string conversion among numerous ch
 Summary(pl.UTF-8):	Convert::Translit - moduł Perla do konwersji tekstów pomiędzy różnymi zestawami znaków
 Name:		perl-Convert-Translit
 Version:	1.03
-Release:	10
+Release:	11
 # same as perl
 License:	GPL v1 or Artistic
 Group:		Development/Languages/Perl
