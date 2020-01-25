@@ -4,7 +4,6 @@
 
 %define		pdir	Convert
 %define		pnam	Translit
-%include	/usr/lib/rpm/macros.perl
 Summary:	Convert::Translit - Perl module for string conversion among numerous character sets
 Summary(pl.UTF-8):	Convert::Translit - moduł Perla do konwersji tekstów pomiędzy różnymi zestawami znaków
 Name:		perl-Convert-Translit
